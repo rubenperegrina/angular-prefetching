@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact.component';
 import { ContactRoutingModule } from './contact-routing.module';
 import { RouterModule } from '@angular/router';
-import { QuicklinkModule } from 'ngx-quicklink';
 
 @NgModule({
   declarations: [
@@ -12,8 +11,7 @@ import { QuicklinkModule } from 'ngx-quicklink';
   imports: [
     CommonModule,
     ContactRoutingModule,
-    RouterModule,
-    QuicklinkModule
+    RouterModule
   ]
 })
 export class ContactModule { }
