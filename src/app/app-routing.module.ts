@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { QuicklinkStrategy } from 'ngx-quicklink';
 
 const routes: Routes = [
   {
@@ -18,6 +19,11 @@ const routes: Routes = [
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
   },
   {
+    path: 'form',
+    title: 'Form',
+    loadChildren: () => import('./form/form.module').then(m => m.FormModule)
+  },
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -26,7 +32,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules
+    preloadingStrategy: QuicklinkStrategy
   })],
   exports: [RouterModule]
 })
