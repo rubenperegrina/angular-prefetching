@@ -4,17 +4,22 @@ export const routes: Routes = [
   {
     path: 'home',
     title: 'Home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
   },
   {
     path: 'contact',
     title: 'Contact',
-    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+    loadComponent: () => import('./contact/contact.component').then(m => m.ContactComponent)
   },
   {
     path: 'about',
     title: 'About',
-    loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
+    loadComponent: () => import('./about/about.component').then(m => m.AboutComponent)
+  },
+  {
+    path: 'form',
+    title: 'Form',
+    loadComponent: () => import('./form/form.component').then(m => m.FormComponent)
   },
   {
     path: '',
