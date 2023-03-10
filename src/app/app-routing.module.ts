@@ -4,7 +4,8 @@ export const routes: Routes = [
   {
     path: 'home',
     title: 'Home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+    data: { preload : true }
   },
   {
     path: 'contact',
@@ -14,7 +15,8 @@ export const routes: Routes = [
   {
     path: 'about',
     title: 'About',
-    loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
+    loadChildren: () => import('./about/about.module').then(m => m.AboutModule),
+    data: { preload : true }
   },
   {
     path: '',
